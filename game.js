@@ -1,5 +1,5 @@
 // alert("javascript is working")
-let buttonColors = ["red". "blue", "green". "yellow"];
+let buttonColors = ["red", "blue", "green", "yellow"];
 
 
 
@@ -7,6 +7,8 @@ let buttonColors = ["red". "blue", "green". "yellow"];
 
 
 function nextSequence(){
+
   let randomNumber = Math.floor(Math.random() * 3) + 1;
-  return randomNumber;
+  let randomChosenColor = buttonColors[randomNumber];
+  return randomChosenColor;
 }
