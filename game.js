@@ -38,5 +38,8 @@ function nextSequence(){
 }
 
 $( ".btn" ).click(function() {
-  alert( "Handler for .click() called." );
+  let userChosenColor = $(this).attr("id");
+  alert( "User clicked on the " + userChosenColor + " button.");
+
+
 });
