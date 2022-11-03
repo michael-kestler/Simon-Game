@@ -40,6 +40,7 @@ function nextSequence(){
 $( ".btn" ).click(function() {
   let userChosenColor = $(this).attr("id");
   alert( "User clicked on the " + userChosenColor + " button.");
-
+  userClickedPattern.push(userChosenColor);
+  console.log(userClickedPattern);
 
 });
