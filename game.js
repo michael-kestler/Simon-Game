@@ -41,6 +41,7 @@ function nextSequence(){
    $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
 
    playSound(randomChosenColor);
+   animatePress(randomChosenColor);
 
 }
 
@@ -54,10 +55,10 @@ function playSound(name){
 
 function animatePress(currentColor){
 
-  $("." + currentColor).addClass('currentColor, pressed');
+  $("." + currentColor).addClass('pressed');
 
   setTimeout(function(){
-    $("." + currentColor).removeClass('currentColor, pressed');
+    $("." + currentColor).removeClass('pressed');
   }, 100);
 
 }
