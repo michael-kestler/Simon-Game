@@ -18,6 +18,8 @@ let gamePattern = [];
 
 let userClickedPattern = [];
 
+let level = 0;
+
 // gamePattern.push(nextSequence());
 
 $( ".btn" ).click(function() {
@@ -36,12 +38,16 @@ function nextSequence(){
 
   let randomNumber = Math.floor(Math.random() * 3) + 1;
   let randomChosenColor = buttonColors[randomNumber];
- gamePattern.push(randomChosenColor);
+  gamePattern.push(randomChosenColor);
 
    $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
 
+   level = level + 1;
+   console.log(level);
+   $("#level-title").text("Level " + level);
    playSound(randomChosenColor);
    animatePress(randomChosenColor);
+
 
 }
 
@@ -62,3 +68,18 @@ function animatePress(currentColor){
   }, 100);
 
 }
+
+let started = false;
+
+$(document).keypress(function(event) {
+
+  if(!started) {
+        started = true;
+        // do something
+        nextSequence(event.key);
+    }
+
+// alert("key has been pressed");
+
+
+});
