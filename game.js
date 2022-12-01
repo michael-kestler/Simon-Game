@@ -41,14 +41,18 @@ $( ".btn" ).click(function() {
   userClickedPattern.push(userChosenColor);
   playSound(userChosenColor);
   animatePress(userChosenColor);
-  checkAnswer(userClickedPattern);
 
+  // Call checkAnswer() after a user has clicked and chosen their answer, passing in the index of the last answer in the user's sequence.
+  checkAnswer(userClickedPattern.length-1);
   console.log(userClickedPattern);
 });
 
 
 
 function nextSequence(){
+//Once nextSequence() is triggered, reset the userClickedPattern to an empty array ready for the next level 
+  userClickedPattern = [];
+
   level++
   console.log(level);
   $("#level-title").text("Level " + level);
