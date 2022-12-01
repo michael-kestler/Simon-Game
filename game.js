@@ -102,6 +102,7 @@ if(userClickedPattern.length === gamePattern.length){
 
   } else {
     playSound("wrong");
+    $(document.body).addClass("game-over");
     console.log("wrong");
   }
 
