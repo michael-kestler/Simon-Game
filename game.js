@@ -101,9 +101,12 @@ if(userClickedPattern.length === gamePattern.length){
 
 
   } else {
-    playSound("wrong");
+   playSound("wrong")
     $(document.body).addClass("game-over");
+
+    setTimeout(function(){
+      $(document.body).removeClass("game-over");
+    }, 200);
     console.log("wrong");
   }
-
 }
