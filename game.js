@@ -50,7 +50,7 @@ $( ".btn" ).click(function() {
 
 
 function nextSequence(){
-//Once nextSequence() is triggered, reset the userClickedPattern to an empty array ready for the next level 
+//Once nextSequence() is triggered, reset the userClickedPattern to an empty array ready for the next level
   userClickedPattern = [];
 
   level++
@@ -101,6 +101,7 @@ if(userClickedPattern.length === gamePattern.length){
 
 
   } else {
+    playSound("wrong");
     console.log("wrong");
   }
 
