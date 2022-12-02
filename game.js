@@ -107,6 +107,8 @@ if(userClickedPattern.length === gamePattern.length){
     setTimeout(function(){
       $(document.body).removeClass("game-over");
     }, 200);
+
+    $("#level-title").text("Game Over, Press Any Key to Restart");
     console.log("wrong");
   }
 }
