@@ -109,6 +109,26 @@ if(userClickedPattern.length === gamePattern.length){
     }, 200);
 
     $("#level-title").text("Game Over, Press Any Key to Restart");
+
     console.log("wrong");
+    startOver();
+
   }
+
+}
+
+function startOver(){
+  gamePattern = [];
+  started = false;
+  level = 0;
+  $(document).keypress(function() {
+    if(!started) {
+          // do something
+          $("#level-title").text("Level " + level);
+          // nextSequence();
+          started = false;
+    }
+    // alert("key has been pressed");
+
+    });
 }
