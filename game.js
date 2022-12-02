@@ -121,14 +121,5 @@ function startOver(){
   gamePattern = [];
   started = false;
   level = 0;
-  $(document).keypress(function() {
-    if(!started) {
-          // do something
-          $("#level-title").text("Level " + level);
-          // nextSequence();
-          started = false;
-    }
-    // alert("key has been pressed");
-
-    });
+  
 }
